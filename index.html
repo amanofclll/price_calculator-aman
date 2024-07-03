@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .output p {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .cost-price {
+            color: red;
+        }
+        .final-panel-discount {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Price Calculator</h1>
+    <label for="dropshipPrice">Dropship Price:</label>
+    <input type="number" id="dropshipPrice" placeholder="Enter Dropship Price" step="0.01">
+    <label for="dropshipDiscount">Dropship Discount:</label>
+    <input type="number" id="dropshipDiscount" placeholder="Enter Dropship Discount %" step="0.01">
+    <button onclick="calculate()">Calculate</button>
+    <div class="output">
+        <p id="costPrice" class="cost-price"></p>
+        <p id="finalPanelDiscount" class="final-panel-discount"></p>
+        <p id="panelPrice"></p>
+        <p id="panelDiscountNo"></p>
+        <p id="estimatedNumber"></p>
+        <p id="finalWebsitePrice"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
