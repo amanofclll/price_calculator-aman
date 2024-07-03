@@ -16,7 +16,7 @@ function calculate() {
     document.getElementById('panelPrice').innerText = `Panel Price: ${panelPrice.toFixed(2)}`;
 
     // 3. Panel Discount No. (previously Demo Discount)
-    let panelDiscountNo = panelPrice - dropshipPrice; // Corrected calculation
+    let panelDiscountNo = dropshipPrice - panelPrice;
     document.getElementById('panelDiscountNo').innerText = `Panel Discount No.: ${panelDiscountNo.toFixed(2)}`;
 
     // 4. Estimated Number (previously Angel 2 Discount)
@@ -28,6 +28,6 @@ function calculate() {
     document.getElementById('finalPanelDiscount').innerText = `Final Panel Discount %: ${finalPanelDiscount.toFixed(2)}%`;
 
     // 6. Final Website Price
-    let finalWebsitePrice = estimatedNumber;
+    let finalWebsitePrice = panelPrice - panelDiscountNo;
     document.getElementById('finalWebsitePrice').innerText = `Final Website Price: ${finalWebsitePrice.toFixed(2)}`;
 }
